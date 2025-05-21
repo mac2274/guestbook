@@ -10,7 +10,26 @@ if(isset($_POST['frm_save'])){
         echo 'Der Eintrag wurde erfolgreich hinzugefügt.';
     }
 }
+
+
 ?>
+
+<script>
+    if (hallo()) {
+  console.log("Fertig");
+}
+
+function hallo() {
+let x = true;
+  if (x == true) {
+    console.log("ICH BIN WAHR!");
+    return true;
+  } else if (x == false) {
+    console.log("ICH BIN FALSCH!");
+    return false;
+  }
+}
+</script>
 
 <form method="POST">
 

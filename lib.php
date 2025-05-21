@@ -1,8 +1,8 @@
 <?php
 
-class DDDatabaseException{
-
+class DDDatabaseException extends Exception {
 }
+
 function gb_function($name, $nachricht){
 
     global $mysqli;
