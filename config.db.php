@@ -1,10 +1,12 @@
 <?php
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-$mysqli = new mysqli('localhost:3303', 'guestbook', 'c9TSmtc-kS)qw(1@', 'guessbook');
-
+$mysqli = new mysqli('db', 'test_kontaktform', 'p]YOo(u]7F1.IbPv', 'guessbook');
+// vorher Problem weil localhost falsch war durch die 
 if($mysqli -> connect_errno){
     throw new RuntimeException('mysqli-Verbindungsfehler: ' . $mysqli->connect_error);
+//  else{
+//     echo "passt immernoch!";
 }
 
 ?>
