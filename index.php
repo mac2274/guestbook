@@ -15,12 +15,13 @@ if(isset($_POST['frm_save'])){
 ?>
 
 <script>
-    if (hallo()) {
+//kurzer Abstecher in die logit von (!ausage)
+if (!hallo()) {
   console.log("Fertig");
 }
 
 function hallo() {
-let x = true;
+let x = false;
   if (x == true) {
     console.log("ICH BIN WAHR!");
     return true;
