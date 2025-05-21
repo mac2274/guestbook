@@ -6,7 +6,7 @@ class DDDatabaseException{
 function gb_function($name, $nachricht){
 
     global $mysqli;
-    $q = "INSERT INTO guessbook SET name = ?, nachricht = ?;"; 
+    $q = "INSERT INTO daybook SET name = ?, nachricht = ?;"; 
     $statement = $mysqli->prepare($q);
     if (!$statement) {
         throw new DDDatabaseException($mysqli->error);
@@ -15,7 +15,7 @@ function gb_function($name, $nachricht){
     if (!$statement->execute()) {
         throw new DDDatabaseException($statement->error);
     }
-    printf("Datenätze eingefügt: %d.\n", $statement->affected_rows);
+    #printf("Datenätze eingefügt: %d.\n", $statement->affected_rows);
     return $statement->affected_rows;
     }
 

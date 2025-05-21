@@ -6,9 +6,9 @@ require_once 'lib.php';
 echo 'Fertig!!';
 
 if(isset($_POST['frm_save'])){
-    echo 'start';
-    echo gb_function($_POST['frm_name'],$_POST['frm_msg']);
-    echo 'ende';
+    if(gb_function($_POST['frm_name'],$_POST['frm_msg'])){
+        echo 'Der Eintrag wurde erfolgreich hinzugefügt.';
+    }
 }
 ?>
 
