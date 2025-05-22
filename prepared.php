@@ -15,12 +15,13 @@ if(isset($_GET['id'])){
         }
         $result = $stmt->get_result();
         while($row = $result->fetch_assoc()){
-            echo $row['name'];
+            echo $row['nachricht'];
         }
     }
 }
 
 while($row = $result->fetch_assoc()){
+    echo 'top';
     echo '<hr><a href="?id=' .$row['daybook_id'].'">#'.$row['daybook_id'].'</a><b>'. htmlspecialchars($row['name']).'</b>:'. htmlspecialchars($row['nachricht']).'<br>';
     echo 'hallo';
 }
