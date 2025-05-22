@@ -7,7 +7,7 @@ if(isset($_POST['frm_save'])){
     }
 }
 
-$query = "SELECT name, nachricht, daybook_id FROM daybook ORDER BY daybook_id DESC LIMIT 3";
+$query = "SELECT name, nachricht, daybook_id FROM daybook ORDER BY daybook_id DESC LIMIT 20";
 $result = $mysqli->query($query);
 
 while($row = $result->fetch_assoc()){

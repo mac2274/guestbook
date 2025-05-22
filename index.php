@@ -3,12 +3,11 @@
 require_once 'config.db.php';
 require_once 'lib.php';
 
-$x = true;
+//$x = true;
 
-if($x==false){
+if(empty($_GET)){
     require 'query.php';
-} else if ($x==true){
-    echo 'hallo';
+} else {
     require 'prepared.php';
 }
 
