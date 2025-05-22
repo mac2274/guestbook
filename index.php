@@ -13,10 +13,6 @@ if($x==false){
     require 'prepared.php';
 }
 
-
-while($row = $result->fetch_assoc()){
-    echo '<hr><a href="?id='.$row['daybook_id'].'">#'.$row['daybook_id'].'</a><b>'. htmlspecialchars($row['name']) . '</b>: '. htmlspecialchars($row['nachricht']) . '<br>';
-}
 ?>
 
 <!-- <script>
