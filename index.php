@@ -5,7 +5,7 @@ require_once 'lib.php';
 
 //$x = true;
 
-if(empty($_GET)){
+if(empty($_GET['id'])){
     require 'query.php';
 } else {
     require 'prepared.php';
