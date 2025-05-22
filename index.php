@@ -4,6 +4,15 @@ require_once 'config.db.php';
 require_once 'lib.php';
 
 //echo 'Fertig!!';
+
+$x = false;
+
+if($x=false){
+    require 'query.php';
+} else if ($x=true){
+    require 'prepared.php';
+}
+
 ?>
 
 <!-- <script>
