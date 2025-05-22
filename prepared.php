@@ -2,10 +2,10 @@
 
 if(isset($_GET['id'])){
     $id=$_GET['id'];
-    
+
     $sql = "SELECT * FROM daybook WHERE daybook_id=?";
 
-    if($stmt = $conn->prepare($sql)){
+    if($stmt = $mysqli->prepare($sql)){
         $stmt->bind_param("i",$id);
         $stmt->execute();
 
@@ -17,5 +17,9 @@ if(isset($_GET['id'])){
             echo $row['name'];
         }
     }
+}
+
+while($row = $result->fetch_assoc()){
+    echo '<hr> <a href="?id=' .$row['daybook_id'].'">#'.$row['daybook_id'].'</a> <b>'. htmlspecialchars($row['name']) . '</b>: '. htmlspecialchars($row['nachricht']) . '<br>';
 }
 ?>
