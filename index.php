@@ -3,17 +3,7 @@
 require_once 'config.db.php';
 require_once 'lib.php';
 
-
-require_once 'query.php';
-
-echo 'Fertig!!';
-
-if(isset($_POST['frm_save'])){
-    if(gb_function($_POST['frm_name'],$_POST['frm_msg'])){
-        echo 'Der Eintrag wurde erfolgreich hinzugefügt.';
-    }
-}
-
+//echo 'Fertig!!';
 ?>
 
 <!-- <script>
