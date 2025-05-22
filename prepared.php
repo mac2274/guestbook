@@ -2,6 +2,7 @@
 
 if(isset($_GET['id'])){
     $id=$_GET['id'];
+    echo $id;
 
     $sql = "SELECT * FROM daybook WHERE daybook_id=?";
 
@@ -20,6 +21,7 @@ if(isset($_GET['id'])){
 }
 
 while($row = $result->fetch_assoc()){
-    echo '<hr> <a href="?id=' .$row['daybook_id'].'">#'.$row['daybook_id'].'</a> <b>'. htmlspecialchars($row['name']) . '</b>: '. htmlspecialchars($row['nachricht']) . '<br>';
+    echo '<hr><a href="?id=' .$row['daybook_id'].'">#'.$row['daybook_id'].'</a><b>'. htmlspecialchars($row['name']).'</b>:'. htmlspecialchars($row['nachricht']).'<br>';
+    echo 'hallo';
 }
 ?>
