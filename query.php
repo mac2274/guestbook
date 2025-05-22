@@ -17,11 +17,5 @@ while($row = $result->fetch_assoc()){
     echo '<hr><a href="?id='.$row['daybook_id'].'">#'.$row['daybook_id'].' </a>'.htmlspecialchars($row['name']).'<br>';
 }
 
-if(empty($_GET['id'])){
-    require 'form.db.php'; 
-    require 'query.php';
-} else {
-    require 'prepared.php';
-}
 ?>
 
