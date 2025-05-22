@@ -5,12 +5,6 @@ require_once 'lib.php';
 
 //$x = true;
 
-if(empty($_GET['id'])){
-    require 'query.php';
-} else {
-    require 'prepared.php';
-}
-
 ?>
 
 <!-- <script>
@@ -34,10 +28,11 @@ let x = false;
 <h1>Gästebuch</h1>
 <h2>Letzte Einträge</h2>
 
-<h2>Neuer Eintrag</h2>
-<form method="POST">
+<?php
 
-    Name: <input type="text" name="frm_name"><br>
-    Nachricht: <textarea type="text" name="frm_msg"></textarea><br>
-    <input type="submit" value="Senden" name="frm_save">
-</form>
+if(empty($_GET['id'])){
+    require 'query.php';
+} else {
+    require 'prepared.php';
+}
+?>
