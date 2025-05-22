@@ -3,6 +3,9 @@
 require_once 'config.db.php';
 require_once 'lib.php';
 
+
+require_once 'query.php';
+
 echo 'Fertig!!';
 
 if(isset($_POST['frm_save'])){
@@ -10,7 +13,6 @@ if(isset($_POST['frm_save'])){
         echo 'Der Eintrag wurde erfolgreich hinzugefügt.';
     }
 }
-
 
 ?>
 
@@ -34,15 +36,6 @@ let x = false;
 
 <h1>Gästebuch</h1>
 <h2>Letzte Einträge</h2>
-
-<?php
-//query-statement nur wenn keine persönlichen daten 
-$query = "SELECT name, nachricht FROM daybook ORDER BY daybook_id DESC LIMIT 3";
-$result = $mysqli->query($query);
-while($row = $result->fetch_assoc()){
-    echo '<hr><b>' . htmlspecialchars($row['name']) . '</b>: '. htmlspecialchars($row['nachricht']) . '<br>';
-}
-?>
 
 <h2>Neuer Eintrag</h2>
 <form method="POST">
