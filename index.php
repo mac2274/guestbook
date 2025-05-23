@@ -27,3 +27,14 @@ let x = false;
 
 <h1>Gästebuch</h1>
 <h2>Letzte Einträge</h2>
+
+<?php
+
+if(empty($_GET['id'])){
+    require 'form.db.php'; 
+    require 'query.php';
+} else {
+    require 'prepared.php';
+}
+
+?>

@@ -1,4 +1,6 @@
 <?php
+//Verknüpfung mit der Datenbank
+
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 $mysqli = new mysqli('db', 'test_kontaktform', 'p]YOo(u]7F1.IbPv', 'guessbook');

@@ -4,6 +4,7 @@ class DDDatabaseException extends Exception {
 }
 
 function gb_function($name, $nachricht){
+//diese Funktion setzt die prepared Statement für das Datenhinzufügen
 
     global $mysqli;
     $q = "INSERT INTO daybook SET name = ?, nachricht = ?;"; 

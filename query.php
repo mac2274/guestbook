@@ -7,15 +7,15 @@ if(isset($_POST['frm_save'])){
     }
 }
 
-
-
-
 $query = "SELECT name, nachricht, daybook_id FROM daybook ORDER BY daybook_id DESC LIMIT 20";
 $result = $mysqli->query($query);
 
 while($row = $result->fetch_assoc()){
-    echo '<hr><a href="?id='.$row['daybook_id'].'">#'.$row['daybook_id'].' </a>'.htmlspecialchars($row['name']).'<br>';
+    //hier wird die VErbindung zur 'id'gesetzt:
+    //wir sagen 'id' ist gleich die 'daybook_id' 
+    echo '<hr><a href="?id='.$row['daybook_id'].'">#'.$row['daybook_id'].'</a>'.htmlspecialchars($row['name']).'<br>';
 }
+
 
 ?>
 
