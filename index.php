@@ -26,12 +26,12 @@ let x = false;
 </script> -->
 
 <h1>Gästebuch</h1>
-<h2>Letzte Einträge</h2>
 
 <?php
 
 if(empty($_GET['id'])){
     require 'form.db.php'; 
+    echo '<h2>Letzte Einträge</h2>';
     require 'query.php';
 } else {
     require 'prepared.php';
