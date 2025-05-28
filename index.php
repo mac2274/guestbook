@@ -2,9 +2,6 @@
 
 require_once 'config.db.php';
 require_once 'lib.php';
-
-//$x = true;
-
 ?>
 
 <!-- <script>
@@ -36,5 +33,4 @@ if(empty($_GET['id'])){
 } else {
     require 'prepared.php';
 }
-
 ?>
