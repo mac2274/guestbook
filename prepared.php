@@ -3,7 +3,7 @@
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    $sql = "SELECT * FROM daybook WHERE daybook_id=?";
+    $sql = "SELECT * FROM daybook WHERE daybook_id=?"; // hier SELECT einer ID!!
 
     if ($stmt = $mysqli->prepare($sql)) {
         $stmt->bind_param("i", $id);

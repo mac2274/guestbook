@@ -7,7 +7,7 @@ function gb_function($name, $nachricht){
 //diese Funktion setzt die prepared Statement für das Datenhinzufügen
 
     global $mysqli;
-    $q = "INSERT INTO daybook SET name = ?, nachricht = ?;"; 
+    $q = "INSERT INTO daybook SET name = ?, nachricht = ?;"; // hier INSERT
     $statement = $mysqli->prepare($q);
     if (!$statement) {
         throw new DDDatabaseException($mysqli->error);
